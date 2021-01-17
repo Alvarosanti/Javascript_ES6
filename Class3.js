@@ -1,10 +1,11 @@
 // objects
 
 var myObject = new Object();
-myObject['1'] = "Alvaro"
-myObject['2'] = "Ramona"
-myObject['3'] = "Mikkel"
-myObject['4'] = "Bob"
+myObject['1'] = "Alvaro";
+myObject['2'] = "Ramona";
+myObject['3'] = "Mikkel";
+myObject['4'] = "Bob";
+myObject[5] = "Patricio";
 // console.log(myObject)
 
 var myOtherObject = {
@@ -16,10 +17,10 @@ var myOtherObject = {
         home : "333-4444",
     },
 };
-
 myOtherObject['Address random'] = "123 fake St." 
 
 // console.log(myOtherObject);
+
 
 var anotherObject = {
     name: "Alvaro",
@@ -27,11 +28,11 @@ var anotherObject = {
     age: "21",
     born: "1998",
     phone: "+51 987654321",
-    
     sayHi: function (){
         console.log("Hi world am in a object");
     },
 }
+// console.log(anotherObject.born)
 // console.log(anotherObject.sayHi());
 // anotherObject.sayHi();
 
@@ -48,7 +49,8 @@ var donut = {
     },
 };
 // donut.showSweetness();
-
+// console.log(donut.sweetness + "/10")
+// donut.sayType();
 
 // Contructor pattern for createing objects
 function Donut(type, glazed, sweetness,hasChocolate){
@@ -64,13 +66,29 @@ function Donut(type, glazed, sweetness,hasChocolate){
     };
 }
 
-var vanilladonu = new Donut("vanilla", true, "6", false);
+// var vanilladonu = new Donut("vanilla", true, "6", false);
 
-console.log(vanilladonu);
-vanilladonu.showsweetness();
+// console.log(vanilladonu);
+// vanilladonu.showsweetness();
 // coconut.sayType();
 // coconut.showsweetness();
 
 
+function Ceviche(type,picante,delicious,haspicante){
+    this.type = type;
+    this.picante = picante;
+    this.delicious = delicious;
+    this.haspicante = haspicante;
+    this.sayType = function(){
+        console.log("type: " + this.type);
+    };
+    this.saydelicious = function(){
+        console.log("delicious:" + this.delicious + "/10");
+    };
+}
+var cevixito = new Ceviche("mixto",true,"10",true);
+var cevixito2 = new Ceviche("conchasnegras", true, 10, true);
+// console.log(cevixito);
+console.log(cevixito2.delicious);
 
 
