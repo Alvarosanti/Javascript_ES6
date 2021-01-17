@@ -14,9 +14,16 @@ var doesNotHaveContent = "";
 var isZero = 0;
 var isNumber = 1;
 var nonAssignedVariable;
+// console.log(nonAssignedVariable);
 var isNotANumber = NaN;
 var isfalse = false;
-// console.log(Boolean(isfalse));
 
-console.log(null === undefined);
+// console.log(Boolean(array));
+// not the same thing
+// console.log(null === undefined);
+if(array){
+    console.log("has truthy")
+}else{
+    console.log("has not truthy")
+}
 
