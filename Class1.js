@@ -7,13 +7,38 @@
 // console.log(+("10")*10);
 
 // strings
-
 console.log("Hello world!");
+// tamagno
 console.log("Hello world!".length);
-console.log("Hello world!".charAt(2));
+// index position
+console.log("Charat Hello world!:","Hello world!".charAt(1));
+// mayus
 console.log("Hello world!".toUpperCase());
+// minus
 console.log("Hello world!".toLowerCase());
-console.log(typeof );
+// tipo de 
+console.log("Tipo de objeto:" );
+console.log(typeof []);
+// operacion
+console.log(1%2);
+// radom number
+console.log(Math.random());
+// operation
+console.log(parseInt("5") + 10);
+// operation
+console.log(parseFloat("5.2") + 10.5);
+// not aritmetic number
+console.log(isNaN());
+// convert to number
+console.log(+"5");
+
+console.log("Tamango de COMOSTAS:","COMOSTAS".length);
+
+
+
+
+
+
 
 
 
