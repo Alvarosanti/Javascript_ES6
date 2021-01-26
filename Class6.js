@@ -28,7 +28,7 @@ function sayHi2() {
         console.log("Hi" +" "+myName);
     }
 }
-sayHi2();
+// sayHi2();
 
 // const 
 const myArray = [1,2,3,4];
@@ -38,9 +38,13 @@ myArray.push(5);
 
 // no se puede reasignar o reemplazar 
 const myObject = { name: "XUPETIN"}
-console.log(myObject);
+// console.log(myObject);
 myObject.name = "XUPETRUJI";
-console.log(myObject);
+// console.log(myObject);
+
+var name;
+console.log("hi "+ name);
+name = "Jason";
 
 
 
