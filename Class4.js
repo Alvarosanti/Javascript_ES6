@@ -6,6 +6,7 @@ myNameArrays[2] = "Arenita";
 // console.log(myNameArrays);
 
 
+
 var myArray = ["Jordi","Chris","Xander","Bruce"];
 // inserta
 myArray.push("Mikkel","Michael","Patricio","Estrella","Don Cangrejo");
@@ -21,7 +22,7 @@ var concattedArray = myArray.concat(otherarray,nameRandom);
 // console.log(concattedArray);
 
 // intervalo
-var slicedArray = concattedArray.slice(0,12);
+var slicedArray = concattedArray.slice(0,2);
 // console.log(slicedArray);
 
 // separador
@@ -35,6 +36,6 @@ var lastName = (concattedArray.length -1);
 
 var myArray = ["Jordi","Chris","Xander","Bruce"];
 var slicedArray = myArray.slice(myArray.length - 1);
-console.log(myArray);
-console.log(slicedArray);
+// console.log(myArray);
+// console.log(slicedArray);
 
