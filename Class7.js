@@ -21,13 +21,14 @@
 //     console.log("Hi there");
 // }
 
-// const banckAccountBalance = 121;
-// const costOfItem = 120;
-// const tax = 0.5;
-// if(banckAccountBalance >= costOfItem + tax){
-//     alert("You can purchase this item")
-// }
-// else{
-//     alert("You cannot purchase this item")
-// }
+const banckAccountBalance = 122;
+const costOfItem = 120;
+const tax = 0.5;
+if(banckAccountBalance >= costOfItem + tax){
+    console.log("You can purchase this item")
+    if(tax >= 0.5){
+        console.log("Tax ammount too high")
+    }
+}
+
 
