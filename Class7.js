@@ -42,6 +42,10 @@ const creditLimit = 150;
 // }
 
 const hasReachedCreditLimit = false;
-if(banckAccountBalance >= costOfItem  || ( hasCreditCard && !hasReachedCreditLimit)){
-    console.log("Can purchase")
+if(banckAccountBalance >= costOfItem){
+    console.log("Congrats. You can pay for this with cash!")
+}else if(hasCreditCard && !hasReachedCreditLimit){
+    console.log("You can pay for this with credit card")
+}else{
+    console.log("Sorry. you cannot purchase this item!")
 }
