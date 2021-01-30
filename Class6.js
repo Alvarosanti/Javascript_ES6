@@ -42,6 +42,7 @@ const myObject = { name: "XUPETIN"}
 myObject.name = "XUPETRUJI";
 // console.log(myObject);
 
+// izar
 var name;
 console.log("hi "+ name);
 name = "Jason";
