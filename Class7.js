@@ -21,14 +21,27 @@
 //     console.log("Hi there");
 // }
 
-const banckAccountBalance = 122;
-const costOfItem = 120;
-const tax = 0.5;
-if(banckAccountBalance >= costOfItem + tax){
-    console.log("You can purchase this item")
-    if(tax >= 0.5){
-        console.log("Tax ammount too high")
-    }
+// const banckAccountBalance = 122;
+// const costOfItem = 120;
+// const tax = 0.5;
+// if(banckAccountBalance >= costOfItem + tax){
+//     console.log("You can purchase this item")
+//     if(tax >= 0.5){
+//         console.log("Tax ammount too high")
+//     }
+// }
+
+
+const banckAccountBalance = 140;
+const costOfItem = 150;
+const canSpendMoney = true;
+const hasCreditCard = true;
+const creditLimit = 150;
+// if(banckAccountBalance >= costOfItem || (hasCreditCard === true && creditLimit >= costOfItem )){
+//     console.log("You can purchase this item")
+// }
+
+const hasReachedCreditLimit = false;
+if(banckAccountBalance >= costOfItem  || ( hasCreditCard && !hasReachedCreditLimit)){
+    console.log("Can purchase")
 }
-
-
