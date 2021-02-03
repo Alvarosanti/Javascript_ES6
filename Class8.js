@@ -110,6 +110,106 @@ function squareNmultiply(num1,num2){
         const formatAll = dataFormatter(formattedName,age);
         return formatAll;
     }
-    console.log(PersonData("Jordi","Enp",24));
+    // console.log(PersonData("Jordi","Enp",24));
+
+
+// advanced functions
+
+var sayHi = () => {console.log("Hi, i'm using an arrow function")};
+// sayHi();
+
+const multiplier = (num1,num2) => {return num1 * num2};
+// console.log(multiplier(2,2));
+
+const users = [
+    {name : "Bob", age: 22},
+    {name : "Arenita", age: 23},
+    {name : "Don cangrejo", age: 21}
+];
+
+const allName = (arra) => arra.map((users) => users.name);
+// console.log(allName(users));
+
+function mapUserAge(myArray){
+    const allage = myArray.map(function(users){
+        return users.age;
+    });
+    return allage;
+}
+// arrow function
+const mapUserAge2 = (arr) => {
+    const arrayAge = arr.map(function(arr){
+        return arr.age;
+    });
+    return arrayAge;
+}
+// console.log(mapUserName(users));
+// console.log(mapUserAge(users));
+// arrow fucntion
+// console.log(mapUserAge2(users));
+
+const multiplierArrow = (x,y) => {return x * y;}
+// console.log(multiplierArrow(2,3))
+
+const squarerArrow = (x) => {return x * x}; 
+// console.log(squarerArrow(2) );
+
+const sayHiArrow =(nom) => "Hi" + " " + nom;
+// console.log(sayHiArrow("Arenita"))
+
+const numbers = [1,2,3,4,5,6,7,8,9];
+const filterNumbers = numbers.filter(function(num){
+    return num % 2 ;
+});
+// console.log(filterNumbers);
+
+// arrow
+const filteredNum2 = numbers.filter((num) => num % 2 ===0);
+// console.log(filteredNum2);
+
+const doubleNum = (num) => {
+    const numberContainer = [];
+    num.forEach((n)=> {
+        const doubled = n * 2;
+        numberContainer.push(doubled);
+    });
+    return numberContainer;
+}
+
+// const anotherNum = [10,11,12,13,14];
+// console.log(doubleNum(anotherNum))
+
+function numberMultiplier (x ,y ) {
+    x = x || 4;
+    y = y || 3;
+    return x * y;
+}
+// console.log(numberMultiplier(5));
+
+function stringSplitter(str) {
+    return str.split(" ");
+};
+// console.log(stringSplitter("hola como stas"));
+
+const bankAccout = {
+    canSpendMoney: true,
+    hasCreditC:true,
+    balance:100
+}
+
+function canPurchaseItem(price,account = bankAccout){
+    if(account.canSpendMoney){
+        account.balance -= price;
+        if(account.balance <= 0){
+            account.canSpendMoney = false;
+        }
+        return true;
+    } else{
+        return false;
+    }
+}
+console.log(canPurchaseItem(100))
+console.log(canPurchaseItem(1))
+
 
 
