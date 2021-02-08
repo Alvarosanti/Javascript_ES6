@@ -1,3 +1,4 @@
+// hw 3
 const name1 = "Socrates";
 const men = true;
 const mortal = true;

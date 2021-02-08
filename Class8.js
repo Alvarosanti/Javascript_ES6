@@ -144,9 +144,9 @@ const mapUserAge2 = (arr) => {
     return arrayAge;
 }
 // console.log(mapUserName(users));
-// console.log(mapUserAge(users));
+console.log(mapUserAge(users));
 // arrow fucntion
-// console.log(mapUserAge2(users));
+console.log(mapUserAge2(users));
 
 const multiplierArrow = (x,y) => {return x * y;}
 // console.log(multiplierArrow(2,3))
@@ -208,8 +208,33 @@ function canPurchaseItem(price,account = bankAccout){
         return false;
     }
 }
-console.log(canPurchaseItem(100))
-console.log(canPurchaseItem(1))
+// console.log(canPurchaseItem(100))
+// console.log(bankAccout.balance);
+// console.log(canPurchaseItem(2))
 
+
+function logAllArguments(mult,...NUMS){
+    return NUMS.map((n) => mult * n)
+    // const args = Array.prototype.slice.call(arguments,logAllArguments.length);
+    // console.log(NUMS)
+}
+// console.log(logAllArguments(5,2,3));
+
+function Dog(years,breed){
+    this.age = years;
+    this.breed = breed;
+    setInterval(() =>{
+        this.age += 1;
+        // console.log(this);
+    },100);
+}
+const spike = new Dog(5,"Golden");
+// const Locky = new Dog(6,"Pitbull");
+// console.log(this.document);
+
+// function testFunctino(){
+//     console.log(this);
+// }
+// testFunctino();
 
 
