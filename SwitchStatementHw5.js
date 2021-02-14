@@ -14,16 +14,18 @@ function timeAdder(value1,label1,value2,label2){
         case value1:
             result = [value1 + value2, label1];
             console.log(result);
-            return; 
+            return;
+        default:
+            return "nothing"
     }
 }
     const inputs = (num,label1,value2,label2) =>{
         let result = num + value2;    
         const pattern = new RegExp('^[ 0-9]+$', 'i');
         const input = timeAdder(num,label1,value2,label2);
-    if(!input){
-        console.log("Invalid en input!");
-    }
+    // if(!input){
+    //     console.log("Invalid en input!");
+    // }
     if(!pattern.test(num)){
         console.log("Invalid en pattern");
         return false;
