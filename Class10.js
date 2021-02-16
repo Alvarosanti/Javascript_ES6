@@ -46,7 +46,7 @@ function nameLooper(arr,user){
 //     }
 // }while(condition);
 
-let money = 600;
+let money = 200;
 
 do{
     CanPurchase();
@@ -55,7 +55,7 @@ do{
 function CanPurchase(){
     if(money>500){
         console.log("Can purchase!");
-        return;
+        return false;
     }else{
         console.log("Cannot purchase!");
     }
