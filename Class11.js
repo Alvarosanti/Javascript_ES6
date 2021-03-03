@@ -16,18 +16,18 @@ function iceCreamLooper(arr,type){
 }
 // iceCreamLooper(sabores,'Chocolate')
 
-// for(let i = 0; i < 50 ; i += 1){
-//     if(i % 3 === 0 && i % 5 === 0){
-//         console.log('Fizz Buzz');
-//     }
-//     else if(i % 3 === 0){
-//         console.log('Fizz');
-//     }
-//     else if(i % 5 === 0){
-//         console.log('Buzz');
-//     }
-//     console.log(i);
-// }
+for(let i = 0; i < 50 ; i += 1){
+    if(i % 3 === 0 && i % 5 === 0){
+        console.log('Fizz Buzz');
+    }
+    else if(i % 3 === 0){
+        console.log('Fizz');
+    }
+    else if(i % 5 === 0){
+        console.log('Buzz');
+    }
+    console.log(i);
+}
 
 // let x = 0;
 // while(x < 10){
