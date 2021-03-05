@@ -48,13 +48,46 @@
 
 // totalwords.innerHTML = specialWord.length;
 
-const memberUl = document.getElementById('members');
-const allmemb = document.getElementsByTagName('li');
+// const memberUl = document.getElementById('members');
+// const allmemb = document.getElementsByTagName('li');
 
-for(const membs of allmemb){
-    if(membs.innerText === 'Patricio'){
-        membs.innerText = 'Plankton';
-        membs.innerHTML = '<h1>Calamardo</h1>'
-    }
-}
+// for(const membs of allmemb){
+//     if(membs.innerText === 'Patricio'){
+//         membs.innerText = 'Plankton';
+//         // membs.innerHTML = '<h1></h1>'
+//     }
+// }
 
+// const myDiv = document.querySelector('div');
+// myDiv.style.color = 'red';
+// myDiv.style.fontSize = '50px';
+
+// console.log(myDiv.style);\
+
+
+const dummyDivs = document.querySelectorAll('.dan span');
+// const iddan = document.getElementById('id-dan');
+// const footer = document.getElementById('footer');
+// // const elID = footer.id;
+// const replacementID = 'bottom';
+// footer.id = replacementID;
+// console.log('footer');
+
+// console.log(elID);
+// console.log(iddan);
+// console.log(dummyDivs.length);
+
+// for(const prop of dummyDivs){
+//     prop.style.color = 'blue';
+//     prop.style.fontSize = '30px'
+// }
+
+const el = document.getElementsByTagName('div');
+const footerDiv = el[el.length -1];
+footerDiv.id = 'footer';
+
+
+const purpleDiv = document.querySelectorAll('.purple');
+purpleDiv.style.background = 'red';
+purpleDiv.style.height = '100px';
+purpleDiv.style.width = '100px';
