@@ -82,12 +82,21 @@ const dummyDivs = document.querySelectorAll('.dan span');
 //     prop.style.fontSize = '30px'
 // }
 
-const el = document.getElementsByTagName('div');
-const footerDiv = el[el.length -1];
-footerDiv.id = 'footer';
+// const el = document.getElementsByTagName('div');
+// const footerDiv = el[el.length -1];
+// footerDiv.id = 'footer';
 
 
-const purpleDiv = document.querySelectorAll('.purple');
-purpleDiv.style.background = 'red';
-purpleDiv.style.height = '100px';
-purpleDiv.style.width = '100px';
+// const purpleDiv = document.querySelectorAll('.purple');
+// purpleDiv.style.background = 'red';
+// purpleDiv.style.height = '100px';
+// purpleDiv.style.width = '100px';
+
+const creationDiv = document.getElementById('created');
+
+const newElement = document.createElement('p');
+newElement.innerText = 'I was create by science!';
+
+creationDiv.appendChild(newElement);
+
+
