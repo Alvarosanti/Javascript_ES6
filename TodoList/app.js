@@ -4,7 +4,7 @@ const formRegistrar = document.getElementById('form-registrarse');
 const btnIniciarSesion = document.getElementById('btn-iniciarSesion');
 
 const list = document.getElementById('list');
-const formTodo = document.getElementById('form-todolist');
+
 const listUl = document.querySelector('ul');
 
 // let usuarios = [];
@@ -143,12 +143,52 @@ btnIniciarSesion.addEventListener('click', (e) =>{
 });
 
 
-formTodo.addEventListener('submit',addToList);
-function addToList(e){
-    e.preventDefault();
-    const input = document.getElementById('myInput').value;
-    const newLi = document.createElement('li');
-    newLi.innerText = input;
-    listUl.appendChild(newLi);
-    formTodo.reset();
+// formTodo.addEventListener('submit',addToList);
+// function addToList(e){
+//     e.preventDefault();
+//     render();
+//     const input = document.getElementById('myInput').value;
+//     const newLi = document.createElement('li');
+//     newLi.innerText = input;
+//     listUl.appendChild(newLi);
+//     todos.push(input);
+//     const todosString = JSON.stringify(todos);
+//     localStorage.setItem('todos',todosString);
+//     render();
+//     formTodo.reset();
+// }
+
+const todosArray = JSON.parse(localStorage.getItem('lista todo')) || [];
+const render = () =>{
+    const elementos = document.querySelectorAll('ul li');
+    elementos.forEach((elemento,i)=>{
+        elemento.addEventListener('click',() =>{
+            elemento.parentNode.removeChild(elemento);
+            todosArray.splice(i,0);
+            render();
+        })
+    })
 }
+
+let todos = [];
+
+window.onload = () => {
+    const form = document.getElementById('form-todolist');
+    form.onsubmit = (e) => {
+        e.preventDefault();
+        const todo = document.getElementById('todo');
+        const todoText = todo.value;
+        todo.value = '';
+        todos.push(todoText);
+        const todoList = document.getElementById('todo-list');
+        todoList.innerHTML = '';
+        for(let i = 0; i<todos.length ; i++){
+            todoList.innerHTML += '<li>'+ todos[i] + '</li>'
+        }
+    }
+}
+
+
+
+
+
