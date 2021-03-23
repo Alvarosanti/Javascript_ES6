@@ -1,13 +1,10 @@
 'use strict';
-const btnRegistrar = document.querySelector('.btn-registrarse');
-const formRegistrar = document.getElementById('form-registrarse');
+// const btnRegistrar = document.querySelector('.btn-registrarse');
+const formRegistrar = document.getElementById('formulario-registrarse');
 const btnIniciarSesion = document.getElementById('btn-iniciarSesion');
-
-const list = document.getElementById('list');
-
+// const list = document.getElementById('list');
 const listUl = document.querySelector('ul');
-
-// let usuarios = [];
+const formularioList = document.getElementById('formulario-list');
 
 let nombre = [],
 apellido = [],
@@ -15,6 +12,7 @@ correos = [],
 contrasena = [];
 
 // obtener_local_storage();
+
 // function obtener_local_storage() {
     //     let recover = localStorage.getItem('persona');
     //     if (localStorage.getItem('persona')) {
@@ -45,6 +43,11 @@ contrasena = [];
 //     return usuario;
 // };
 
+const nomb = JSON.parse(localStorage.getItem('nombre')) || [];
+const apell = JSON.parse(localStorage.getItem('apellido')) || [];
+const corre = JSON.parse(localStorage.getItem('correo')) || [];
+const contras = JSON.parse(localStorage.getItem('contrasena')) || [];
+
 const guardarLocal = (nom,ape,correo,contra) =>{
     // localStorage.setItem('persona', JSON.stringify(usuarios));
 
@@ -72,13 +75,6 @@ formRegistrar.addEventListener('submit',(e)=>{
     formRegistrar.reset();
 });
 
-// jquery
-$(document).ready(function(){
-    $('.btn-registrarse').click(function(){
-        var name = $('#id-nombre');
-        console.log('Nuevo usuario: ',name.val());
-    });
-});
 
 btnIniciarSesion.addEventListener('click', (e) =>{
     e.preventDefault();
@@ -109,23 +105,13 @@ btnIniciarSesion.addEventListener('click', (e) =>{
         }
     }
 
-    // for(let em in correo){
-    //     if(correo[em] === corr){
-    //         email.push(correo[em]);
-    //         // return true
-    //     }
-    // }
-    // for(let pas in contra){
-    //     if(contra[pas] === contr){
-    //         pass.push(contra[pas]);
-    //         // return true;
-    //     }
-    // }
-
     if(email.toString() === corr && pass.toString() === contr){
         alert('Ingresando!');
+        formularioList.style.display = 'Block';
+        formIniciar.style.display = 'none';
         email = [];
         pass = [];
+
     }else{
         alert('Usuario o contrasena incorrecta!');
         email = [];
@@ -140,55 +126,16 @@ btnIniciarSesion.addEventListener('click', (e) =>{
     console.log('obtenido y validado del ls',correo);
     console.log('obtenido y validado del ls',contra);
 
+    console.log(nombre);
+    console.log(apellido);
+    console.log(correos);
+
 });
 
-
-// formTodo.addEventListener('submit',addToList);
-// function addToList(e){
-//     e.preventDefault();
-//     render();
-//     const input = document.getElementById('myInput').value;
-//     const newLi = document.createElement('li');
-//     newLi.innerText = input;
-//     listUl.appendChild(newLi);
-//     todos.push(input);
-//     const todosString = JSON.stringify(todos);
-//     localStorage.setItem('todos',todosString);
-//     render();
-//     formTodo.reset();
-// }
-
-const todosArray = JSON.parse(localStorage.getItem('lista todo')) || [];
-const render = () =>{
-    const elementos = document.querySelectorAll('ul li');
-    elementos.forEach((elemento,i)=>{
-        elemento.addEventListener('click',() =>{
-            elemento.parentNode.removeChild(elemento);
-            todosArray.splice(i,0);
-            render();
-        })
-    })
-}
-
-let todos = [];
-
-window.onload = () => {
-    const form = document.getElementById('form-todolist');
-    form.onsubmit = (e) => {
-        e.preventDefault();
-        const todo = document.getElementById('todo');
-        const todoText = todo.value;
-        todo.value = '';
-        todos.push(todoText);
-        const todoList = document.getElementById('todo-list');
-        todoList.innerHTML = '';
-        for(let i = 0; i<todos.length ; i++){
-            todoList.innerHTML += '<li>'+ todos[i] + '</li>'
-        }
-    }
-}
-
-
-
-
-
+// jquery
+// $(document).ready(function(){
+//     $('.btn-registrarse').click(function(){
+//         var name = $('#id-nombre');
+//         console.log('Nuevo usuario: ',name.val());
+//     });
+// });

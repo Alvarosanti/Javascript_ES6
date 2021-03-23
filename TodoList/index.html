@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <link rel="stylesheet" href="style.css">
+    
     <title>To do List</title>
 </head>
 <body>
     <!-- btn registrarse o inciar session -->
     <div id="formulario-incio">
-        <form id="form-incio" method="POST">
+        <form id="form-incio" >
             <Head>Lista de tareas pendientes</Head>
-            <button type="submit">Registrarse</button>
-            <button type="submit">Iniciar Sesion</button>
+            <button id="btnRegistrar">Registrarse</button>
+            <button id="btnIniciar">Iniciar Sesion</button>
         </form>
     </div>
     <!-- end regis o iniciar seseion -->
     
     <!-- formulario registrarse -->
-    <div id="formulario-registrarse">
+    <div id="formulario-registrarse" method="POST">
         <form id="form-registrarse">
             <span >Nombre: </span>
             <input id="id-nombre" required="required" type="text">
@@ -50,24 +51,24 @@
             <input id="id-contraLog" required="required" type="password" name="" id="">
             <button id="btn-iniciarSesion">Iniciar Sesion</button>
         </form>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     </div>
     <!-- end formulario iniciar seeseion -->
     
     <!-- formulario to do List -->
-    <div id="list">
+    <div id="formulario-list">
         <form id="form-todolist" method="POST">
             <input  required="required" id="todo">
             <button type="submit">Agregar</button>
             <h2>To do list: </h2>
         </form>
-            <ul id="todo-list">
-            </ul>
+        <ul id="todo-list">
+        </ul>
     </div>
     <!-- end formulario to do List -->
-
-</body>
-<script src="app.js">
     
-</script>
+</body>
+<script src="app.js"></script>
+<script src="todolist.js"></script>
+<script src="transiciones.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script> -->
 </html>
