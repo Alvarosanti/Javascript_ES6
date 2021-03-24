@@ -72,65 +72,67 @@ formRegistrar.addEventListener('submit',(e)=>{
 
     // nuevoUsuario(nom,ape,correo,contra);
     guardarLocal(nom,ape,correo,contra);
-    formRegistrar.reset();
-});
-
-
-btnIniciarSesion.addEventListener('click', (e) =>{
-    e.preventDefault();
-    // datos obtenidos del localStorage
-    let nom = JSON.parse(localStorage.getItem('nombre'));
-    let correo = JSON.parse(localStorage.getItem('correo'));
-    let contra = JSON.parse(localStorage.getItem('contrasena'));
-
-    // datos del form iniciar seesion
-    let corr = document.getElementById('id-CorreoLog').value;
-    let contr = document.getElementById('id-contraLog').value;
-
-    // datos temporales obtenidos y validados
-    var email = [];
-    var pass = [];
-
-    for(let i=0; i < correo.length ; i++){
-        if(correo[i] === corr){
-            email.push(correo[i]);
-            // return true
-        }
-    }
-
-    for(let i=0; i < contra.length ; i++){
-        if(contra[i] === contr){
-            pass.push(contra[i]);
-            // return true
-        }
-    }
-
-    if(email.toString() === corr && pass.toString() === contr){
-        alert('Ingresando!');
-        formularioList.style.display = 'Block';
-        formIniciar.style.display = 'none';
-        email = [];
-        pass = [];
-
-    }else{
-        alert('Usuario o contrasena incorrecta!');
-        email = [];
-        pass = [];
-    }
-
-    console.log(nom);
-    console.log(correo);
-    console.log(contra);
-    console.log('correo array pusheado',email);
-    console.log('contrasena array pushead',pass);
-    console.log('obtenido y validado del ls',correo);
-    console.log('obtenido y validado del ls',contra);
-
-    console.log(nombre);
-    console.log(apellido);
-    console.log(correos);
 
 });
+
+$(document).ready(function(){
+    $('#btn-iniciarSesion').click(function(e){
+        e.preventDefault();
+        let nom = JSON.parse(localStorage.getItem('nombre'));
+        let correo = JSON.parse(localStorage.getItem('correo'));
+        let contra = JSON.parse(localStorage.getItem('contrasena'));
+    
+        // datos del form iniciar seesion
+        let corr = document.getElementById('id-CorreoLog').value;
+        let contr = document.getElementById('id-contraLog').value;
+    
+        // datos temporales obtenidos y validados
+        var email = [];
+        var pass = [];
+    
+        for(let i=0; i < correo.length ; i++){
+            if(correo[i] === corr){
+                email.push(correo[i]);
+                // return true
+            }
+        }
+    
+        for(let i=0; i < contra.length ; i++){
+            if(contra[i] === contr){
+                pass.push(contra[i]);
+                // return true
+            }
+        }
+    
+        if(email.toString() === corr && pass.toString() === contr){
+            alert('Ingresando!');
+            formularioList.style.display = 'Block';
+            formIniciar.style.display = 'none';
+            email = [];
+            pass = [];
+    
+        }else{
+            alert('Usuario o contrasena incorrecta!');
+            email = [];
+            pass = [];
+        }
+    
+        console.log(nom);
+        console.log(correo);
+        console.log(contra);
+        console.log('correo array pusheado',email);
+        console.log('contrasena array pushead',pass);
+        console.log('obtenido y validado del ls',correo);
+        console.log('obtenido y validado del ls',contra);
+    
+        console.log(nombre);
+        console.log(apellido);
+        console.log(correos);
+    })
+    
+
+
+})
 
 // jquery
 // $(document).ready(function(){

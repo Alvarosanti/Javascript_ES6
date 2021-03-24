@@ -5,57 +5,28 @@
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <link rel="stylesheet" href="style.css">
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
     <title>To do List</title>
 </head>
 <body>
     <!-- btn registrarse o inciar session -->
-    <div id="formulario-incio">
-        <form id="form-incio" >
-            <Head>Lista de tareas pendientes</Head>
-            <button id="btnRegistrar">Registrarse</button>
-            <button id="btnIniciar">Iniciar Sesion</button>
-        </form>
-    </div>
+    <div id="formulario-incio"></div>
     <!-- end regis o iniciar seseion -->
     
     <!-- formulario registrarse -->
-    <div id="formulario-registrarse" method="POST">
-        <form id="form-registrarse">
-            <span >Nombre: </span>
-            <input id="id-nombre" required="required" type="text">
-            <span>Apellido:</span>
-            <input id="id-apellido" required="required" type="text">
-            <span>Correo electronico: </span>
-            <input id="id-correo" required="required" type="text">
-            <span>Contrase&ntilde;a</span>
-            <input id="id-contra" required="required" type="password" >
-            <input type="checkbox"><span>Acepto los Terminos de uso</span>
-            <button class="btn-registrarse">Registrarse</button>
-        </form>
-    </div>
-    
+    <div style="display: none;" id="formulario-registrarse"></div>
     <!--ERROR validaciones error, campos vacios, correo invalido, contrasena mayor de 5 caracteres -->
     <!-- SUCCESS lleva al panel principal y datos almacenados en localstorage -->
     
     <!-- end formulario registrarse -->
     
     <!-- formulario iniciar sesion -->
-    <div id="formulario-iniciar-sesion">
-        <form id="form-iniciarsesion" method="POST">
-            <h2>Iniciar Sesion</h2>
-            <span>Usuario</span>
-            <input id="id-CorreoLog" required="required" type="text">
-            <br><br>
-            <span>Contrase&ntilde;a</span>
-            <input id="id-contraLog" required="required" type="password" name="" id="">
-            <button id="btn-iniciarSesion">Iniciar Sesion</button>
-        </form>
-    </div>
+    <div style="display: none;" id="formulario-iniciar-sesion"></div>
     <!-- end formulario iniciar seeseion -->
     
     <!-- formulario to do List -->
-    <div id="formulario-list">
+    <div style="display: none;" id="formulario-list">
         <form id="form-todolist" method="POST">
             <input  required="required" id="todo">
             <button type="submit">Agregar</button>
@@ -69,6 +40,6 @@
 </body>
 <script src="app.js"></script>
 <script src="todolist.js"></script>
-<script src="transiciones.js"></script>
-<!-- <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script> -->
+<!-- <script src="transiciones.js"></script> -->
+<script src="TemplateLiteral.js"></script>
 </html>
