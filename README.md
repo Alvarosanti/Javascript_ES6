@@ -1,5 +1,6 @@
 # Javascript_ES6
 pirple course
+lan spanish
 ¿Qué es la programación orientada a objetos y por qué la usaría?
 La programacion orientada a objetos es, una forma o modelo de programacion con guias,
 esta basado en clases y objetos. 
